@@ -14,6 +14,8 @@ public interface booksRepository extends MongoRepository<Books, String>{
     public List<Books> findBooksByGenre(String genre);
     @Query("{'title':?0}")
     Optional<Books> findBooksByTitle(String title);
+    @Query("{'id':{$ne:?0},'title':?1,'author':?2}")
+    Optional<Books> findDuplicates(String id,String title,String author);
     @Query("{'title':?0,'author':?1}")
-    Optional<Books> findDuplicates(String title,String author);
+    Optional<Books> findDuplicatesWithoutID(String title,String author);
 }

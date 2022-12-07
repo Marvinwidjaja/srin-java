@@ -28,7 +28,7 @@ public class BookServiceImpl implements BookService{
     }
     @Override
     public void addBook(Books books) throws ConstraintViolationException,BookExceptions{
-        Optional<Books> booksDuplicate = booksRepository.findDuplicates(books.getTitle(),books.getAuthor());
+        Optional<Books> booksDuplicate = booksRepository.findDuplicatesWithoutID(books.getTitle(),books.getAuthor());
         if(booksDuplicate.isPresent()){
             throw new BookExceptions(BookExceptions.BookAlreadyExists());
         }else{
@@ -39,8 +39,7 @@ public class BookServiceImpl implements BookService{
     @Override
     public void updateBook(String id, Books books) throws BookExceptions {
         Optional<Books> booksOptional= booksRepository.findById(id); 
-        Optional<Books> duplicateBook = booksRepository.findDuplicates(books.getTitle(), books.getAuthor());
-
+        Optional<Books> duplicateBook = booksRepository.findDuplicates(id,books.getTitle(), books.getAuthor());
         if(booksOptional.isPresent()){
             if(duplicateBook.isPresent()){
                 throw new BookExceptions(BookExceptions.BookAlreadyExists());
