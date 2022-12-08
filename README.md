@@ -42,4 +42,10 @@ PUT
 }
 </pre>
 
+DELETE
+
+"https://srin-java.herokuapp.com/deleteBook/$id" - delete books by specifying their $id
+
+
+
 
