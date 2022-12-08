@@ -31,6 +31,15 @@ POST
 
 PUT
 
-"https://srin-java.herokuapp.com/editBook/$id" - edit books by adding $id in the request. Edit books with the same JSON raw body as above
+"https://srin-java.herokuapp.com/editBook/$id" - edit books by adding $id in the request. Edit books with the same JSON raw body as above</br>(String title, String author, String genre, Integer pages, Integer year_published)
+<pre>
+{</br>
+   "title": "Book_NAME",</br>
+   "author": "AUTHOR_NAME",</br>
+   "genre": "GENRE", </br>
+   "pages": $PAGES,</br>
+   "year_published" : $YEAR_PUBLISHED</br>
+}
+</pre>
 
 
