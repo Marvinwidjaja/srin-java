@@ -18,7 +18,7 @@ GET
 
 POST
 
-"https://srin-java.herokuapp.com/addBook" - add books with the following JSON raw body(String title, String author, String genre, Integer pages, Integer year_published)
+"https://srin-java.herokuapp.com/addBook" - add books with the following JSON raw body</br>(String title, String author, String genre, Integer pages, Integer year_published)
 <pre>
 {</br>
    "title": "Book_NAME",</br>
