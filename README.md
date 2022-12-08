@@ -21,9 +21,9 @@ POST
 "https://srin-java.herokuapp.com/addBook" - add books with the following JSON raw body
 
 {</br>
-    "title": "Book_NAME",</br>
-    "author": "AUTHOR_NAME",</br>
-    "genre": "GENRE, </br>
-    "pages": $PAGES,</br>
-    "year_published" : $YEAR_PUBLISHED</br>
+   >  "title": "Book_NAME",</br>
+   >  "author": "AUTHOR_NAME",</br>
+   >  "genre": "GENRE, </br>
+  >   "pages": $PAGES,</br>
+ >   "year_published" : $YEAR_PUBLISHED</br>
 }
