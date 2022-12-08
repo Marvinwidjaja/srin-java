@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "e0d931ab-fe76-4af7-96b4-ef9d2bef1ead",
+		"name": "SRIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16054841"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://srin-java.herokuapp.com/books",
+					"protocol": "https",
+					"host": [
+						"srin-java",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books by Genre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": 1234,\n    \"author\": \"Author Name\",\n    \"genre\": \"Book Genre\", \n    \"pages\": 123,\n    \"year_published\" : 2000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/books/editBook/6390b6bbae19d5b31b8f88f1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"editBook",
+						"6390b6bbae19d5b31b8f88f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"To Kill a Mockingbird\",\n    \"author\": \"Harper Lee\",\n    \"genre\": \"Thriller\", \n    \"pages\": 281,\n    \"year_published\" : 1960\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://srin-java.herokuapp.com/addBook",
+					"protocol": "https",
+					"host": [
+						"srin-java",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Book by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"Marvin\",\n    \"genre\": \"Book Genre\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/editBook/63909a54a535b958027248a6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editBook",
+						"63909a54a535b958027248a6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://srin-java.herokuapp.com/deleteBook",
+					"protocol": "https",
+					"host": [
+						"srin-java",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"deleteBook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
