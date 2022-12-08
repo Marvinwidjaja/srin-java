@@ -28,3 +28,9 @@ POST
    "year_published" : $YEAR_PUBLISHED</br>
 }
 </pre>
+
+PUT
+
+"https://srin-java.herokuapp.com/editBook/$id" - edit books by adding $id in the request. Edit books with the same JSON raw body as above
+
+
